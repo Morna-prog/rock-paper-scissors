@@ -71,6 +71,7 @@ button:hover {
 button:focus {
   transform: scale(0.8,0.8);
   border-color: #ffc600;
+  color:#ffc600;
 }
 button:disabled{
   transform: scale(1,1);
