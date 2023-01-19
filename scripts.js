@@ -47,8 +47,27 @@ function playRound(playerSelection, computerSelection) {
 }
 let playerScore = 0;
 let computerScore = 0;
+function playSound(e) {
+    const audio = document.querySelector('audio')
+    if(!audio) return;
+    audio.currentTime = 0;
+    audio.play()
+}
 buttons.forEach(button => {
     button.addEventListener('click', function() {
-        playRound(button.className)
+        playRound(button.className);
+        playSound();
     })
+})
+
+const restartBtn = document.querySelector('.restart')
+
+restartBtn.addEventListener('click', function(){
+    buttons.forEach(elem => {
+        elem.disabled = false
+    })
+    playerScore = 0;
+    computerScore = 0;
+    let result = document.querySelector('.result')
+    result.textContent = ''
 })
