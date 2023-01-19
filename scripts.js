@@ -71,3 +71,4 @@ restartBtn.addEventListener('click', function(){
     let result = document.querySelector('.result')
     result.textContent = ''
 })
+
